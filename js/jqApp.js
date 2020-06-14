@@ -49,8 +49,8 @@ $(document).ready(function () {
                         response.weather[0].icon
                         }@2x.png">
                       <p>wind speed:${response.wind.speed}</p>
-                      <p>temperature: ${response.main.temp}</p>
-                      <p>humadity: ${response.main.humidity}</p>
+                      <p>temperature: ${Math.round(response.main.temp - 273.15)}°C</p>
+                      <p>humadity: ${response.main.humidity}%</p>
                       <p>visibility: ${response.visibility}</p>`);
                 });
             })
